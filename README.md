@@ -36,4 +36,5 @@ Note: As you can see, you can specify the number of threads to use above, just l
 Best practices:
 
 -Minimum number of threads you can allocate: Number of CPU(s) * Number of cores per CPU * Number of threads per core (most likely 2)
+
 -Maximum number of threads you can allocate: Minimum number of threads * 2
