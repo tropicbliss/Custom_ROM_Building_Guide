@@ -7,30 +7,57 @@ Click this link [here](https://source.android.com/setup/build/requirements) from
 
 ### How To Build Stock AOSP ROMs
 Click [here](https://source.android.com/setup/build/downloading) to download Repo. Now, while following the instructions, it might tell you to enter the following command or something similar if you are downloading a specific version of Android rather than the latest version:
+
 ```sh
 repo init -u https://android.googlesource.com/platform/manifest -b android-4.0.1_r1
 ```
+
 Take note that the following example tells Repo to initialise the AOSP repository from the "android-4.0.1_r1" branch. If you want to download another branch of Android, click [here](https://source.android.com/setup/start/build-numbers#source-code-tags-and-builds) or the link provided in the instructions. After that, just copy the branch name from the appropriate row from the table into the command and run it. You should have configured Git if you followed the instructions closely, or this command will result in an error. If you do not want Google to know your name and username, feel free to enter a placeholder name and email address just like how the examples from the instructions show. When asked whether you want to enable colour display in this user account, feel free to enter "yes", and that it does not really matter anyway.
+
 After running "repo init", continue to follow the instructions and run "repo sync". Note that depepnding on your network speed, you might want to set the number of threads that should be utilised to synchronise the repo. The default option (without specifying any arguments) would be four threads. If you have a slower internet connection, you can lower it down to two, or if you have a faster network connection, feel free to raise that number. For example, to set the number of threads to allocate for download to two:
+
 ```sh
 repo sync -j2
 ```
+
 This process will take about an hour or more, so feel free to grab a cup of coffee, get on with your day while having this process running in the background in your computer.
 Note: To prevent your computer from sleeping, download a software called "Caffeine", which will engage a wakelock to prevent your computer from sleeping so that the process will not be disrupted.
-After this command is done running, click [here](https://source.android.com/setup/build/building) and follow the instructions to start the process of building Android. Now, the instructions might want you to run the following command:
+
+Now, if you start building Android, the process will go on smoothly with no errors, but if you flash the ROM onto your phone, you'll find out that you phone will be unable to boot. That is because if we look at the build directory you will find that there is no "vendor" folder there, as it does not automatically download the proprietary binaries for you. That particular folder is important as it contains all the necessary drivers specific to your device to allow it to run. To download those files, head over to [TheMuppets repository](https://github.com/TheMuppets) and there you will find the proprietary binaries of many major phone OEMs there in separate repositories. If you are building for a Google Pixel device, head over to the repository named "proprietary_vendor_google".
+
+Note: If you are building for a Nexus device, most of these devices are not built by Google as Google only provides the software, while other OEMs build the physical device for them. Therefore, most of the components that make up the Nexus devices are put together by them, so head over to their repositories instead and look for your device codename.
+
+Now head over to the correct branch (select the Lineage version that corresponds to the Android version you are building). There are multiple methods of downloading the proprietary binaries, but the best method is to create a local manifest so that every time you run "repo sync" the proprietary binaries will be automatically updated together with the source code. So now head over to <BUILD_DIRECTORY>/.repo/manifests (make sure you enable the option to show hidden files) and create a .xml file named "local_manifest.xml" (though you can create an .xml file with whatever name you like). After that, copy the following in (and modifying whatever parts that needs to be changed):
+
+```
+<?xml version="1.0" encoding ="UTF-8"?>
+<manifest>
+  <project name="TheMuppets/proprietary_vendor_google" path="vendor/google" remote="github" revision="lineage-16.0" />
+</manifest>
+```
+
+Now run "repo sync" again and the necessary files should be downloaded.
+
+After you are done downloading proprieatry binaries, click [here](https://source.android.com/setup/build/building) and follow the instructions to start the process of building Android. Now, the instructions might want you to run the following command:
+
 ```sh
 lunch aosp_arm-eng
 ```
+
 However, since you are not familiar with all the device codenames, run the command without any attributes instead:
+
 ```sh
 lunch
 ```
+
 The command prompt will present you with a list of devices that you can build for. Just enter the appropriate option number and press enter. Now this command will just set up the build environment and not start building Android until you run the "make" command further down the road.
 Note: There are multiple varients of the ROM that you can build for a device. For more information, at the same webpage, there is a table labeled "buildtype" which will tell you more about what ROM varient is best suited for your intention of building your ROM.
 After this command has completed, you can run the following command below:
+
 ```sh
 make -j4
 ```
+
 Note: As you can see, you can specify the number of threads to use above, just like the "repo sync" command. However, the number of threads you should use is now wholly dependent on the amount of resources you should allocate to your CPU, rather than going by your internet speed, as we are well past of downloading source code from the internet and are now building Android, which is a very CPU intensive task, so your computer is going to get real toasty really fast. So set the appropriate number of threads based on how many cores your CPU has. The more the number of CPU cores, the more the amount of threads you can allocate. The default option (without specifying any arguments) is four threads. Also, this process is going to take a long while (just like the "repo sync" command earlier), so feel free to leave your computer for now. Lastly, throughout the build process, there might be warnings that will be shown in the terminal. Most of the time, you do not have to worry about those, until errors occur.
 
 Best practices:
