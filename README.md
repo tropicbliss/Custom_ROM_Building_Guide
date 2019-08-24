@@ -38,3 +38,11 @@ Best practices:
 - Minimum number of threads you can allocate: Number of CPU(s) * Number of cores per CPU * Number of threads per core (most likely 2)
 
 - Maximum number of threads you can allocate: Minimum number of threads * 2
+
+After the build has completed enter <BUILD_DIRECTORY>/out/target/product/<DEVICE_CODENAME> and you will see a bunch of .img files. You can flash them with Fastboot. However, if you want to convert those files into a single .zip file which can be flashed in recoveries such as TWRP, you will need to run the following command below:
+
+```sh
+make otapackage
+```
+
+This will generate a .zip file in the same directory as mentioned above. This process will take a shorter time to execute as you should have the necessary files required after building to flash a functioning ROM into a device, so the program is smart enough to not build Android again. With that said, if you do not want to create any .img files but generate a .zip file directly, you can run "make otapackage" instead of the "make -jX" command mentioned above.
