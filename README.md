@@ -3,7 +3,7 @@ This guide offers a simple guide on how to build a custom ROM for Android. Howev
 Note: This guide assumes that you know how to use Linux fluently.
 
 ### Requirements And Setting Up
-Click this link [here](https://source.android.com/setup/build/requirements) from the official AOSP website to see if your computer meets the hardware and software requirements needed to build ROMs. Also, click this link [here](https://source.android.com/setup/build/initializing) to set up your build environment properly.
+Click this link [here](https://source.android.com/setup/build/requirements) from the official AOSP website to see if your computer meets the hardware and software requirements needed to build ROMs. Also, click this link [here](https://source.android.com/setup/build/initializing) to set up your build environment properly. If you are using Linux, I highly recommend you to use any Ubuntu versions that support OpenJDK 8. It is possible to build ROMs using a Mac, but this guide is targeted specifically for Linux users.
 
 ### How To Build Stock AOSP ROMs
 Click [here](https://source.android.com/setup/build/downloading) to download Repo. Now, while following the instructions, it might tell you to enter the following command or something similar if you are downloading a specific version of Android rather than the latest version:
