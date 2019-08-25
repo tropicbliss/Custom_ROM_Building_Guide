@@ -37,29 +37,30 @@ Now head over to the correct branch (select the Lineage version that corresponds
 </manifest>
 ```
 
-Now run "repo sync" again and the necessary files should be downloaded.
+Now run "repo sync" again to download the necessary files.
 
-After you are done downloading proprieatry binaries, click [here](https://source.android.com/setup/build/building) and follow the instructions to start the process of building Android. Now, the instructions might want you to run the following command:
+After the proprietary binaries have downloaded, click [here](https://source.android.com/setup/build/building) and follow the instructions to start the process of building Android. Now, the instructions might want you to run the following command:
 
 ```sh
 lunch aosp_arm-eng
 ```
 
-However, since you are not familiar with all the device codenames, run the command without any attributes instead:
+However, since you are not familiar with all the device codenames, run the command without any arguments instead:
 
 ```sh
 lunch
 ```
 
-The command prompt will present you with a list of devices that you can build for. Just enter the appropriate option number and press enter. Now this command will just set up the build environment and not start building Android until you run the "make" command further down the road.
-Note: There are multiple varients of the ROM that you can build for a device. For more information, at the same webpage, there is a table labeled "buildtype" which will tell you more about what ROM varient is best suited for your intention of building your ROM.
+The command prompt presents you with a list of devices that you can build. Just enter the appropriate option number and press enter. Now this command sets up the build environment and not start building Android until you run the "make" command further down the road.
+
+Note: There are multiple variants of the ROM that you can build for a device. For more information, on the same webpage, there is a table labeled "buildtype" which tells you more about what ROM variant is best suited for your intention of building your ROM.
 After this command has completed, you can run the following command below:
 
 ```sh
 make -j4
 ```
 
-Note: As you can see, you can specify the number of threads to use above, just like the "repo sync" command. However, the number of threads you should use is now wholly dependent on the amount of resources you should allocate to your CPU, rather than going by your internet speed, as we are well past of downloading source code from the internet and are now building Android, which is a very CPU intensive task, so your computer is going to get real toasty really fast. So set the appropriate number of threads based on how many cores your CPU has. The more the number of CPU cores, the more the amount of threads you can allocate. The default option (without specifying any arguments) is four threads. Also, this process is going to take a long while (just like the "repo sync" command earlier), so feel free to leave your computer for now. Lastly, throughout the build process, there might be warnings that will be shown in the terminal. Most of the time, you do not have to worry about those, until errors occur.
+Note: As you can see, you can specify the number of threads to use above, just like the "repo sync" command. However, the number of threads you should use is now wholly dependent on the amount of resources you should allocate to your CPU, rather than going by your internet speed, as we are well past of downloading source code from the internet and are now building Android, which is a very CPU intensive task, so your computer is going to get real toasty really fast. So set the appropriate number of threads based on how many cores your CPU has. The more the number of CPU cores, the more the number of threads you can allocate. The default option (without specifying any arguments) is four threads. Also, this process is going to take a long while (just like the "repo sync" command earlier), so feel free to leave your computer for now. Lastly, throughout the build process, warnings might appear. Most of the time, you do not have to worry about those, until errors occur.
 
 Best practices:
 
@@ -67,10 +68,10 @@ Best practices:
 
 - Maximum number of threads you can allocate: Minimum number of threads * 2
 
-After the build has completed enter <BUILD_DIRECTORY>/out/target/product/<DEVICE_CODENAME> and you will see a bunch of .img files. You can flash them with Fastboot. However, if you want to convert those files into a single .zip file which can be flashed in recoveries such as TWRP, you will need to run the following command below:
+After the build has completed enter <BUILD_DIRECTORY>/out/target/product/<DEVICE_CODENAME> and you will see a bunch of .img files. You can flash them with Fastboot. However, most of the time, you want to create a flashable zip file. To do that you need to run the following command below:
 
 ```sh
 make otapackage
 ```
 
-This will generate a .zip file in the same directory as mentioned above. This process will take a shorter time to execute as you should have the necessary files required after building to flash a functioning ROM into a device, so the program is smart enough to not build Android again. With that said, if you do not want to create any .img files but generate a .zip file directly, you can run "make otapackage" instead of the "make -jX" command mentioned above.
+This command generates a .zip file in the same directory as mentioned above. This process takes a shorter time to execute as you should have the necessary files required after building to flash a functioning ROM into a device, so the program is smart enough not to build Android again. With that said, if you do not want to create any .img files but generate a .zip file directly, you can run "make otapackage" instead of the "make -jX" command mentioned above.
