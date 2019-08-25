@@ -75,3 +75,7 @@ make otapackage
 ```
 
 This command generates a .zip file in the same directory as mentioned above. This process takes a shorter time to execute as you should have the necessary files required after building to flash a functioning ROM into a device, so the program is smart enough not to build Android again. With that said, if you do not want to create any .img files but generate a .zip file directly, you can run "make otapackage" instead of the "make -jX" command mentioned above.
+
+# Trying Out Different Android Versions
+
+You can install Android Studio on your computer and use the included Android emulator to try out different stock versions of Android.
