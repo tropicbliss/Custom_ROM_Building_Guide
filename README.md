@@ -79,3 +79,11 @@ This command generates a .zip file in the same directory as mentioned above. Thi
 # Trying Out Different Android Versions
 
 You can install Android Studio on your computer and use the included Android emulator to try out different stock versions of Android.
+
+# How To Build Custom ROMs
+
+In this guide, we are using LineageOS as an example of how to build custom ROMs for your device. This process is mostly the same as building AOSP ROMs, so I am not going through all the steps mentioned above again, but I am going to highlight any actions that are noticeably different.
+
+### Build Instructions
+
+The process for building Android will differ from one custom ROM to another. So the first and most crucial step is to search for the manifest of the custom ROM (which is different from the local manifest file stated above). It is a guide specially made for the custom ROM you are building. You can typically find it in their repository by searching for the keyword "manifest", or in LineageOS's case, in a repository named "android" (which is also relatively common). Make sure that you are in the correct branch (correct LineageOS version). Over there, you might find that their instructions might be similar or even identical (except the "repo init" command which points to a different repository) to the steps mentioned earlier. Make sure to follow their instructions carefully.
