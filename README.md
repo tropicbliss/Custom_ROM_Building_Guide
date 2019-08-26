@@ -3,11 +3,11 @@
 This guide offers a simple guide on how to build a custom ROM for Android. However, simple can be harder than complex: You have to work hard to get your thinking clean to make it simple. But it’s worth it in the end because once you get there, you can move mountains.
 Note: This guide assumes that you know how to use Linux fluently.
 
-### Requirements And Setting Up
+## Requirements And Setting Up
 
 Click this link [here](https://source.android.com/setup/build/requirements) from the official AOSP website to see if your computer meets the hardware and software requirements needed to build ROMs. Also, click this link [here](https://source.android.com/setup/build/initializing) to set up your build environment properly. If you are using Linux, I recommend using any Ubuntu versions that support the correct OpenJDK version depending on what version of Android you are building. It is possible to build ROMs using a Mac, but this guide is targeted specifically for Linux users.
 
-### How To Build Stock AOSP ROMs
+## How To Build Stock AOSP ROMs
 
 Click [here](https://source.android.com/setup/build/downloading) to download Repo. Now, while following the instructions, it might tell you to enter the following command or something similar if you are downloading a specific version of Android rather than the latest version:
 
@@ -79,11 +79,11 @@ make otapackage
 
 This command generates a .zip file in the same directory as mentioned above. This process takes a shorter time to execute as you should have the necessary files required after building to flash a functioning ROM into a device, so the program is smart enough not to build Android again. With that said, if you do not want to create any .img files but generate a .zip file directly, you can run "make otapackage" instead of the "make -jX" command mentioned above.
 
-# Trying Out Different Android Versions
+## Trying Out Different Android Versions
 
 You can install Android Studio on your computer and use the included Android emulator to try out different stock versions of Android.
 
-# How To Build Custom ROMs
+## How To Build Custom ROMs
 
 In this guide, we are using LineageOS as an example of how to build custom ROMs for your device. This process is mostly the same as building AOSP ROMs, so I am not going through all the steps mentioned above again, but I am going to highlight any actions that are noticeably different.
 
