@@ -9,6 +9,8 @@ Click this link [here](https://source.android.com/setup/build/requirements) from
 
 ## How To Build Stock AOSP ROMs
 
+### repo init
+
 Click [here](https://source.android.com/setup/build/downloading) to download Repo. Now, while following the instructions, it might tell you to enter the following command or something similar if you are downloading a specific version of Android rather than the latest version:
 
 ```sh
@@ -16,6 +18,8 @@ repo init -u https://android.googlesource.com/platform/manifest -b android-4.0.1
 ```
 
 Take note that the following example tells Repo to initialise the AOSP repository from the "android-4.0.1_r1" branch. If you want to download another branch of Android, click [here](https://source.android.com/setup/start/build-numbers#source-code-tags-and-builds) or the link provided in the instructions. After that, copy the branch name from the appropriate row from the table into the command and run it. You should have configured Git if you followed the instructions carefully, or this command results in an error. If you do not want Google to know your name and username, feel free to enter a placeholder name and email address just like how the examples from the instructions show. When asked whether you want to enable colour display in this user account, feel free to enter "yes", as it does not matter.
+
+### repo sync
 
 After running "repo init", continue to follow the instructions and run "repo sync". Note that depending on your network speed, you might want to set the number of threads that should be utilised to synchronise the repo. The default option (without specifying any arguments) would be four threads. If you have a slower internet connection, you can lower it down to two. To set the number of threads to allocate for download to two:
 
@@ -26,6 +30,8 @@ repo sync -j2
 This process takes about an hour or more, so feel free to grab a cup of coffee, get on with your day while having this process running in the background on your computer.
 
 Note: To prevent your computer from sleeping, download a software called "Caffeine", which engages a wakelock to prevent your computer from sleeping so that the computer does not disrupt the process automatically.
+
+### Downloading Proprietary Binaries
 
 Now, if you start building Android, the process goes on smoothly with no errors, but if you flash the ROM onto your phone, you will find out that your phone is unable to boot. That is because if we look at the build directory, you find that there is no "vendor" folder there, as it does not automatically download the proprietary binaries for you. That particular folder is essential as it contains all the necessary drivers specific to your device to allow it to run. To download those files, head over to [TheMuppets repository](https://github.com/TheMuppets) and there, you find the proprietary binaries of many major phone OEMs there in separate repositories. If you are building for a Google Pixel device, head over to the repository named "proprietary_vendor_google".
 
@@ -41,6 +47,8 @@ Now head over to the correct branch (select the Lineage version that corresponds
 ```
 
 Now run "repo sync" again to download the necessary files.
+
+### Building Android
 
 After the proprietary binaries have downloaded, click [here](https://source.android.com/setup/build/building) and follow the instructions to start the process of building Android. Now, the instructions might want you to run the following command:
 
@@ -70,6 +78,8 @@ Best practices:
 - Minimum number of threads you can allocate: Number of CPU(s) * Number of cores per CPU * Number of threads per core (most likely 2)
 
 - Maximum number of threads you can allocate: Minimum number of threads * 2
+
+### Creating Flashable Zips
 
 After the build has completed enter <BUILD_DIRECTORY>/out/target/product/<DEVICE_CODENAME> and you will see a bunch of .img files. You can flash them with Fastboot. However, most of the time, you want to create a flashable zip file. To do that you need to run the following command below:
 
