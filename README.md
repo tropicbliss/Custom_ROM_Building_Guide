@@ -123,4 +123,4 @@ After checking your device at the TheMuppets repository, go to <BUILD_DIRECTORY>
 
 ## Resolving Errors
 
-Time and time again, you might encounter errors while building the custom ROM. The best way to resolve it is to copy and paste the error message and Google it to figure out what other users are doing to fix the error.
+Time and time again, you might encounter errors while building the custom ROM. The best way to resolve it is to copy and paste the error message along with the name of the custom ROM you are building and Google it to figure out what other users are doing to fix the error.
