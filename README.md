@@ -116,3 +116,7 @@ Just like the "lunch" command, custom ROMs may employ various custom commands to
 ### Proprietary Binaries
 
 If you are building for a device officially supported by the custom ROM, you do not have to specify the repository to download the vendor files manually. The program will download it automatically for you.
+
+## Resolving Errors
+
+Time and time again, you might encounter errors while building the custom ROM. The best way to resolve it is to copy and paste the error message and Google it to figure out what other users are doing to fix the error.
