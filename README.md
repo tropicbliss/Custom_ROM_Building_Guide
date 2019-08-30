@@ -56,7 +56,9 @@ After the proprietary binaries have downloaded, click [here](https://source.andr
 lunch aosp_arm-eng
 ```
 
-However, since you are not familiar with all the device codenames, run the command without any arguments instead:
+If you did not follow the instructions carefully, your computer might spit out an error stating that it cannot understand this command. This error is because you did not initialise the environment. Initialising the environment enables you to run commands such as "lunch" (and many other custom commands found in custom ROMs) as this allows the computer to set up the necessary build environment so that all the tools are at your disposal when needed.
+
+Now to prevent me from going off-topic, let's move on to the next part. Since you are not familiar with all the device codenames, run the command without any arguments instead:
 
 ```sh
 lunch
@@ -104,4 +106,9 @@ Note: You should not use the same build directory if you are building a differen
 The process for building Android will differ from one custom ROM to another. So the first and most crucial step is to search for the manifest of the custom ROM (which is different from the local manifest file stated above). It is a guide specially made for the custom ROM you are building. You can typically find it in their repository by searching for the keyword "manifest", or in LineageOS's case, in a repository named "android" (which is also relatively common). Make sure that you are in the correct branch (correct LineageOS version). Over there, you might find that their instructions might be similar or even identical (except the "repo init" command which points to a different repository) to the steps mentioned earlier. Make sure to follow their instructions carefully.
 
 ### repo init
+
 Notice that the "repo init" command points to a different repository in the manifest as compared to the repository stated in the official AOSP website. You should copy and paste the "repo init" in the manifest instead of copy and pasting the entire "repo init" command from the official AOSP website.
+
+### Custom Commands
+
+Just like the "lunch" command, custom ROMs may employ various custom commands to simplify the building process. LineageOS (and it's derivative custom ROMs) use the "brunch" command. It sets up your build environment to be configured for your device and then commences the build process. It's generally only used for officially supported devices (ones that you use can choose through the breakfast menu). It is basically a combination of "lunch" and "make" (or more accurately "breakfast" and "mka"). "breakfast" does the same thing as "lunch", but as mentioned above, is used typically for building supported devices of a specific custom ROM. "mka" does the same job as "make", but builds Android more efficiently, as it uses the program "sched_tool" to make full use of all the threads available on your machine. For AMD, this is equivalent to the number of cores your processor has; For Intel, this is usually equivalent to twice the amount of cores your processor has, due to Hyperthreading). What this means is that ALL of your processors are working, not just one small part of it. Choose the device you want to build for by typing the "brunch" command. Type in the numbered option, and sit back and relax. You do not have to run the "make" command; the computer will do that for you.
