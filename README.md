@@ -113,6 +113,14 @@ Notice that the "repo init" command points to a different repository in the mani
 
 Just like the "lunch" command, custom ROMs may employ various custom commands to simplify the building process. LineageOS (and it's derivative custom ROMs) use the "brunch" command. It sets up your build environment to be configured for your device and then commences the build process. It's generally only used for officially supported devices (ones that you use can choose through the breakfast menu). It is basically a combination of "lunch" and "make" (or more accurately "breakfast" and "mka"). "breakfast" does the same thing as "lunch", but as mentioned above, is used typically for building supported devices of a specific custom ROM. "mka" does the same job as "make", but builds Android more efficiently, as it uses the program "sched_tool" to make full use of all the threads available on your machine. For AMD, this is equivalent to the number of cores your processor has; For Intel, this is usually equivalent to twice the amount of cores your processor has, due to Hyperthreading). What this means is that ALL of your processors are working, not just one small part of it. Choose the device you want to build for by typing the "brunch" command. Type in the numbered option, and sit back and relax. You do not have to run the "make" command; the computer will do that for you.
 
+### Proprietary Binaries
+
+After checking your device at the TheMuppets repository, go to <BUILD_DIRECTORY>/.repo/local_manifests instead. Open the file named "roomservice.xml" with a text editor and add the following line into the .xml file (and modifying whatever parts that need to be changed):
+
+```
+  <project name="TheMuppets/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" />
+```
+
 ## Resolving Errors
 
 Time and time again, you might encounter errors while building the custom ROM. The best way to resolve it is to copy and paste the error message and Google it to figure out what other users are doing to fix the error.
