@@ -131,3 +131,16 @@ Note: If you do not have the folder, you can make the folder and build it.
 ## Resolving Errors
 
 Time and time again, you might encounter errors while building the custom ROM. The best way to resolve it is to copy and paste the error message along with the name of the ROM you are building and Google it to figure out what other users are doing to fix the error.
+
+## Building A Custom ROM For Any Device
+
+When I say any device, I mean any device that has their device, kernel, and proprietary binaries made public. Use Google to search for the device tree, kernel tree, and the proprietary binaries of the device you want to build for. For example, this are the links to the repositories for the OnePlus 6:
+
+Device tree:
+https://github.com/LineageOS/android_device_oneplus_enchilada.git
+Kernel tree:
+https://github.com/LineageOS/android_kernel_oneplus_sdm845.git
+Vendor tree:
+https://github.com/TheMuppets/proprietary_vendor_oneplus.git
+
+As you can see, since LineageOS officially support OnePlus 6, its device and kernel tree are included in their repository. You could use the same device and kernel tree to build other custom ROMs for that same device.  If other custom ROMs officially support your device, they will also have included the device and kernel tree in their repositories. Another way is to go to your device's XDA Developers forum page and look for any custom ROMs built by other users. The link to the device and kernel tree etc. should be posted there.
