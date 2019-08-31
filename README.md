@@ -31,6 +31,26 @@ This process takes about an hour or more, so feel free to grab a cup of coffee, 
 
 Note: To prevent your computer from sleeping, download a software called "Caffeine", which engages a wakelock to prevent your computer from sleeping so that the computer does not disrupt the process automatically.
 
+### Preparing To Build Android
+
+After running "repo sync", click [here](https://source.android.com/setup/build/building) and follow the instructions to start the process of building Android. Now, the instructions might want you to run the following command:
+
+```sh
+lunch aosp_arm-eng
+```
+
+If you did not follow the instructions carefully, your computer might spit out an error stating that it cannot understand this command. This error is because you did not initialise the environment. Initialising the environment enables you to run commands such as "lunch" (and many other custom commands found in custom ROMs) as this allows the computer to set up the necessary build environment so that all the tools are at your disposal when needed.
+
+Now to prevent me from going off-topic, let's move on to the next part. Since you are not familiar with all the device codenames, run the command without any arguments instead:
+
+```sh
+lunch
+```
+
+The command prompt presents you with a list of devices that you can build. Just enter the appropriate option number and press enter. Now this command sets up the build environment and not start building Android until you run the "make" command further down the road.
+
+Note: There are multiple variants of the ROM that you can build for a device. For more information, on the same webpage, there is a table labeled "buildtype" which tells you more about what ROM variant is best suited for your intention of building your ROM.
+
 ### Downloading Proprietary Binaries
 
 Now, if you start building Android, the process goes on smoothly with no errors, but if you flash the ROM onto your phone, you will find out that your phone is unable to boot. That is because if we look at the build directory, you find that there is no "vendor" folder there, as it does not automatically download the proprietary binaries for you. That particular folder is essential as it contains all the necessary drivers specific to your device to allow it to run. To download those files, head over to [TheMuppets repository](https://github.com/TheMuppets) and there, you find the proprietary binaries of many major phone OEMs there in separate repositories. If you are building for a Google Pixel device, head over to the repository named "proprietary_vendor_google".
@@ -48,26 +68,9 @@ Now head over to the correct branch (select the Lineage version that corresponds
 
 Now run "repo sync" again to download the necessary files.
 
-### Building Android
+### Building Android 
 
-After the proprietary binaries have downloaded, click [here](https://source.android.com/setup/build/building) and follow the instructions to start the process of building Android. Now, the instructions might want you to run the following command:
-
-```sh
-lunch aosp_arm-eng
-```
-
-If you did not follow the instructions carefully, your computer might spit out an error stating that it cannot understand this command. This error is because you did not initialise the environment. Initialising the environment enables you to run commands such as "lunch" (and many other custom commands found in custom ROMs) as this allows the computer to set up the necessary build environment so that all the tools are at your disposal when needed.
-
-Now to prevent me from going off-topic, let's move on to the next part. Since you are not familiar with all the device codenames, run the command without any arguments instead:
-
-```sh
-lunch
-```
-
-The command prompt presents you with a list of devices that you can build. Just enter the appropriate option number and press enter. Now this command sets up the build environment and not start building Android until you run the "make" command further down the road.
-
-Note: There are multiple variants of the ROM that you can build for a device. For more information, on the same webpage, there is a table labeled "buildtype" which tells you more about what ROM variant is best suited for your intention of building your ROM.
-After this command has completed, you can run the following command below:
+After you have downloaded the necessary proprietary binaries, you can run the following command below:
 
 ```sh
 make -j4
