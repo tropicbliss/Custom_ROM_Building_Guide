@@ -160,7 +160,7 @@ Since you are building for a different custom ROM, go to <BUILD_DIRECTORY>/devic
 add_lunch_combo aokp_enchilada-eng
 ```
 
-to:
+to this:
 
 ```
 add_lunch_combo pac_enchilada-eng
