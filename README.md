@@ -146,7 +146,7 @@ Vendor tree: https://github.com/TheMuppets/proprietary_vendor_oneplus.git
 
 As you can see, since LineageOS officially support OnePlus 6, its device and kernel tree are included in their repository. You could use the same device and kernel tree to build other custom ROMs for that same device.  If other custom ROMs officially support your device, they will also have included the device and kernel tree in their repositories. Another way is to go to your device's XDA Developers forum page and look for any custom ROMs built by other users. The link to the device and kernel tree etc. should be posted there. Lastly, as I mentioned above, you could Google it.
 
-Now that you have the links to the repositories required, add the following repositories to the "roomservice.xml" file as I mentioned above:
+Now that you have the links to the repositories required, assuming that you are building for the OnePlus 6, add the following repositories to the "roomservice.xml" file as I mentioned above (modify when necessary):
 
 ```
   <project name="LineageOS/android_device_oneplus_enchilada" path="device/oneplus/enchilada" remote="github" revision="lineage-16.0" />
