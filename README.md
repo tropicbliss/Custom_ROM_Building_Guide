@@ -49,7 +49,7 @@ lunch
 
 The command prompt presents you with a list of devices that you can build. Just enter the appropriate option number and press enter. Now this command sets up the build environment and not start building Android until you run the "make" command further down the road.
 
-Note: There are multiple variants of the ROM that you can build for a device. For more information, on the same webpage, there is a table labeled "buildtype" which tells you more about what ROM variant is best suited for your intention of building your ROM.
+Note: There are multiple variants of the ROM that you can build for a device. For more information, on the same webpage, there is a table labeled "buildtype" which tells you more about what ROM variant is best suited for your intention of building your ROM. Also, if you have not downloaded the proprietary binaries yet (which we are going to do so below), errors might appear. Ignore them for now.
 
 ### Downloading Proprietary Binaries
 
