@@ -66,7 +66,7 @@ Now head over to the correct branch (select the Lineage version that corresponds
 </manifest>
 ```
 
-Now run "repo sync" again to download the necessary files.
+Now run "repo sync" and repeat the steps under "Preparing To Build Android" again to download the necessary files.
 
 ### Building Android 
 
