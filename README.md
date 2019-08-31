@@ -106,7 +106,7 @@ Note: You should not use the same build directory if you are building a differen
 
 ### Build Instructions
 
-The process for building Android will differ from one custom ROM to another. So the first and most crucial step is to search for the manifest of the custom ROM (which is different from the local manifest file stated above). It is a guide specially made for the custom ROM you are building. You can typically find it in their repository by searching for the keyword "manifest", or in LineageOS's case, in a repository named "android" (which is also relatively common). Make sure that you are in the correct branch (correct LineageOS version). Over there, you might find that their instructions might be similar or even identical (except the "repo init" command which points to a different repository) to the steps mentioned earlier. Make sure to follow their instructions carefully.
+The process for building Android will differ from one custom ROM to another. So the first and most crucial step is to search for the manifest of the custom ROM (which is different from the local manifest file stated above). It is a guide specially made for the custom ROM you are building. You can typically find it in their repository by searching for the keyword "manifest", or in LineageOS's case, in a repository named "android" (which is also relatively common). Make sure that you are in the correct branch (correct LineageOS version). Over there, you might find that their instructions might be similar or even identical (except the "repo init" command which points to a different repository) to the steps mentioned earlier. Make sure to follow their instructions carefully. Mentioned below are some of the steps that will be different.
 
 ### repo init
 
@@ -134,6 +134,8 @@ Time and time again, you might encounter errors while building the custom ROM. T
 
 ## Building A Custom ROM For Any Device
 
+Note: It is highly recommended to read the entire guide from start to finish and not to jump to this part straight away.
+
 When I say any device, I mean any device that has their device, kernel, and proprietary binaries made public. Use Google to search for the device tree, kernel tree, and the proprietary binaries of the device you want to build for. For example, this are the links to the repositories for the OnePlus 6:
 
 Device tree: https://github.com/LineageOS/android_device_oneplus_enchilada.git
@@ -143,3 +145,9 @@ Kernel tree: https://github.com/LineageOS/android_kernel_oneplus_sdm845.git
 Vendor tree: https://github.com/TheMuppets/proprietary_vendor_oneplus.git
 
 As you can see, since LineageOS officially support OnePlus 6, its device and kernel tree are included in their repository. You could use the same device and kernel tree to build other custom ROMs for that same device.  If other custom ROMs officially support your device, they will also have included the device and kernel tree in their repositories. Another way is to go to your device's XDA Developers forum page and look for any custom ROMs built by other users. The link to the device and kernel tree etc. should be posted there. Lastly, as I mentioned above, you could Google it.
+
+Now that you have the links to the repositories required to add the following repositories to the "roomservice.xml" file as I mentioned above:
+
+```
+  <project name="LineageOS/android_device_oneplus_enchilada" path="device/oneplus/enchilada" remote="github" revision="lineage-16.0" />
+```
