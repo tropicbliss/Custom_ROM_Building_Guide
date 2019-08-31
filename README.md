@@ -167,3 +167,5 @@ to this:
 ```
 add_lunch_combo pac_enchilada-eng
 ```
+
+Now if you start building your custom ROM, you might encounter errors. The most common reason is that you are still missing some build dependencies. Look through the errors, and try running "breakfast" or "lunch" commands if you cannot spot any errors that make sense to you. Once, you identified the build dependency you need to include, simply include the necessary repository into "roomservice.xml" and run "repo sync" again.
