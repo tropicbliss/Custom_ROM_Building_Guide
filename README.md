@@ -150,6 +150,8 @@ Now that you have the links to the repositories required, add the following repo
 
 ```
   <project name="LineageOS/android_device_oneplus_enchilada" path="device/oneplus/enchilada" remote="github" revision="lineage-16.0" />
+  <project name="LineageOS/android_kernel_oneplus_sdm845" path="kernel/oneplus/sdm845" remote="github" revision="lineage-16.0" />
+  <project name="TheMuppets/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" revision="lineage-16.0" />
 ```
 
 After that, run "repo sync" to download the repositories to the build directory.
