@@ -151,3 +151,17 @@ Now that you have the links to the repositories required, add the following repo
 ```
   <project name="LineageOS/android_device_oneplus_enchilada" path="device/oneplus/enchilada" remote="github" revision="lineage-16.0" />
 ```
+
+After that, run "repo sync" to download the repositories to the build directory.
+
+Since you are building for a different custom ROM, go to <BUILD_DIRECTORY>/device/<DEVICE_OEM>/<DEVICE_CODENAME> and open "vendorsetup.sh". For example, if you took the device tree from an AOSP custom ROM, but you are building for PAC ROM, change the following line from this:
+
+```
+add_lunch_combo aokp_enchilada-eng
+```
+
+to:
+
+```
+add_lunch_combo pac_enchilada-eng
+```
