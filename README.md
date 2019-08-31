@@ -126,6 +126,8 @@ After checking your device at the TheMuppets repository, go to <BUILD_DIRECTORY>
   <project name="TheMuppets/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" />
 ```
 
+Note: If you do not have the folder, you can make the folder and build it. Also, some custom ROMs might not automatically add the build dependencies to download to "roomservice.xml". You will have to search for .dependencies files in the folders contained in the "device" folder (device tree) in the build directory.
+
 ## Resolving Errors
 
 Time and time again, you might encounter errors while building the custom ROM. The best way to resolve it is to copy and paste the error message along with the name of the ROM you are building and Google it to figure out what other users are doing to fix the error.
