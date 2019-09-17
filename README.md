@@ -48,7 +48,7 @@ If you did not follow the instructions carefully, your computer might spit out a
 Now to prevent me from going off-topic, let's move on to the next part. Since you are not familiar with all the device codenames, run the command without any arguments instead:
 
 ```sh
-breakfast
+lunch
 ```
 
 The command prompt presents you with a list of devices that you can build. Just enter the appropriate option number and press enter. Now this command sets up the build environment and not start building Android until you run the "make" command further down the road.
@@ -70,11 +70,7 @@ Now head over to the correct branch (select the Lineage version that corresponds
 </manifest>
 ```
 
-Now run "repo sync" and run the command below to prepare to start the build.
-
-```sh
-lunch
-```
+Now run "repo sync" and the "lunch" command to prepare to build.
 
 ### Building Android 
 
