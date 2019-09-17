@@ -66,8 +66,11 @@ Now head over to the correct branch (select the Lineage version that corresponds
 </manifest>
 ```
 
-Now run "repo sync" and run the command "lunch" to prepare to start the build.
+Now run "repo sync" and run the command below to prepare to start the build.
 
+```sh
+lunch
+```
 
 ### Building Android 
 
