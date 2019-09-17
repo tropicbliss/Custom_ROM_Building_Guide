@@ -187,3 +187,9 @@ add_lunch_combo pac_enchilada-eng
 ```
 
 Now if you start building your custom ROM, you might encounter errors. The most common reason is that you are still missing some build dependencies. Look through the errors, and try running "breakfast" or "lunch" commands if you cannot spot any errors that make sense to you. Once, you identified the build dependency you need to include, simply include the necessary repository into "roomservice.xml" and run "repo sync" again.
+
+## Cherrypicking Guide
+
+Unfortunately, not every device runs as smooth or bug-free as its OEM ROM it is shipped with after flashing the ROM you had just built. Therefore, you might want to integrate fixes from other ROM developers into your ROM. The easiest way to do that is to cherry-pick commits from other ROM developers in the hope that it will solve the problem you are currently facing in your ROM.
+
+To add code from other repositories to your current repository for building your custom ROM, check out this useful guide [here](https://www.google.com/url?sa=t&source=web&rct=j&url=https://forum.xda-developers.com/showthread.php%3Ft%3D2763236&ved=2ahUKEwiq3ueB_tjkAhVLfisKHcbhCu0QFjAAegQIAxAB&usg=AOvVaw1ZVNVztDPgncTqb2cqKo_B).
