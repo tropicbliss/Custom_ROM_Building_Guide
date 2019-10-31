@@ -140,7 +140,7 @@ After checking your device at the TheMuppets repository, go to <BUILD_DIRECTORY>
   <project name="TheMuppets/proprietary_vendor_oneplus" path="vendor/oneplus" remote="github" />
 ```
 
-Note: If you do not have the folder, you can make the folder and build it.
+Note: If you do not have the folder, you can simply create it.
 
 ### Custom Build Scripts
 
