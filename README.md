@@ -1,7 +1,7 @@
 # Android Custom ROM Building Guide
 
 This guide offers a simple guide on how to build a custom ROM for Android. However, simple can be harder than complex: You have to work hard to get your thinking clean to make it simple *(I'm not even sure what I'm saying at this point, thanks to sleep deprivation)*. But it’s worth it in the end because once you get there, you can move mountains.
-Note: This guide assumes that you know how to use Linux fluently.
+Note: This guide assumes that you know how to use Linux fluently. Thanks to LineageOS Wiki for providing this guide with valuable information.
 
 ## Requirements And Setting Up
 
@@ -16,6 +16,8 @@ Click [here](https://source.android.com/setup/build/downloading) to download Rep
 ```sh
 repo init -u https://android.googlesource.com/platform/manifest -b android-4.0.1_r1
 ```
+
+This will download your device’s device specific configuration and kernel.
 
 Take note that the following example tells Repo to initialise the AOSP repository from the "android-4.0.1_r1" branch. If you want to download another branch of Android, click [here](https://source.android.com/setup/start/build-numbers#source-code-tags-and-builds) or the link provided in the instructions. After that, copy the branch name from the appropriate row from the table into the command and run it. You should have configured Git if you followed the instructions carefully, or this command results in an error. If you do not want Google to know your name and username, feel free to enter a placeholder name and email address just like how the examples from the instructions show. When asked whether you want to enable colour display in this user account, feel free to enter "yes", as it does not matter.
 
@@ -37,7 +39,7 @@ Refer to this [link](https://wiki.lineageos.org/devices/klte/build#turn-on-cachi
 
 Note: To prevent your computer from sleeping, download a software called "Caffeine", which engages a wakelock to prevent your computer from sleeping so that the computer does not disrupt the process automatically.
 
-### Preparing To Build Android
+### Prepare The Device-specific Code
 
 After running "repo sync", click [here](https://source.android.com/setup/build/building) and follow the instructions to start the process of building Android. Now, the instructions might want you to run the following command:
 
