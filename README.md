@@ -1,7 +1,7 @@
 # Android Custom ROM Building Guide
 
 This guide offers a simple guide on how to build a custom ROM for Android. However, simple can be harder than complex: You have to work hard to get your thinking clean to make it simple *(I'm not even sure what I'm saying at this point, thanks to sleep deprivation)*. But it’s worth it in the end because once you get there, you can move mountains.
-Note: This guide assumes that you know how to use Linux fluently. This guide is a compilation of what I've learned over the years. Thanks to LineageOS Wiki and AlaskaLinuxUser and many other sources my tired brain is unable to remember, as this guide will not be possible without them.
+Note: This guide assumes that you know how to use Linux fluently. This guide is a compilation of what I've learned over the years. Thanks to AlaskaLinuxUser and LineageOS wiki and many other sources my tired brain is unable to remember, as this guide will not be possible without them.
 
 ## Requirements And Setting Up
 
