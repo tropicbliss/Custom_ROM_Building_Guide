@@ -76,6 +76,34 @@ Now head over to the correct branch (select the Lineage version that corresponds
 
 Now run "repo sync" and the "lunch" command to prepare to build.
 
+Note: If you own the device you can also extract the proprietary binaries provided that you are running LineageOS based on the branch you wish to build for. Information is provided in the build instructions of the various devices in the LineageOS Wiki.
+
+### Turn On Caching To Speed Up Build
+
+Make use of ccache if you want to speed up subsequent builds by running:
+
+```sh
+export USE_CCACHE=1
+```
+
+and adding that line to your ~/.bashrc file. Then, specify the maximum amount of disk space you want ccache to use by typing this:
+
+```sh
+ccache -M 50G
+```
+
+where 50G corresponds to 50GB of cache. This needs to be run once. Anywhere from 25GB-100GB will result in very noticeably increased build speeds (for instance, a typical 1hr build time can be reduced to 20min). If you’re only building for one device, 25GB-50GB is fine. If you plan to build for several devices that do not share the same kernel source, aim for 75GB-100GB. This space will be permanently occupied on your drive, so take this into consideration.
+
+You can also enable the optional ccache compression. While this may involve a slight performance slowdown, it increases the number of files that fit in the cache. To enable it, run:
+
+```sh
+export CCACHE_COMPRESS=1
+```
+
+or add that line to your ~/.bashrc file.
+
+Note: If compression is enabled, the ccache size can be lower (aim for approximately 20GB for one device).
+
 ### Building Android 
 
 After you have downloaded the necessary proprietary binaries, you can run the following command below:
