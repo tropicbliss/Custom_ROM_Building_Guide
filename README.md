@@ -27,7 +27,7 @@ After running "repo init", continue to follow the instructions and run "repo syn
 repo sync -j2
 ```
 
-Note: You can increase the number of threads by increasing the number of X, where X in -jX is the number of threads to use while downloading the source. This is highly dependent on the quality of your internet connection with the repo server.
+Note: You can increase the number of threads by increasing the number of X, where X in -jX is the number of threads to use while downloading the source. This is highly dependent on the quality of your internet connection with the repo server. The -c argument tells Repo to pull in only the current branch instead of all branches that are available on the repository.
 
 This process takes about an hour or more, so feel free to grab a cup of coffee, get on with your day while having this process running in the background on your computer.
 
