@@ -220,7 +220,7 @@ Now that you have the links to the repositories required, assuming that you are 
 
 After that, run "repo sync" to download the repositories to the build directory.
 
-Since you are building a different custom ROM, go to <BUILD_DIRECTORY>/device/<DEVICE_OEM>/<DEVICE_CODENAME> and open "vendorsetup.sh". For example, if you took the device tree from an AOKP, but you are building PAC ROM, change the following line from this,
+Since you are building a different custom ROM, go to <BUILD_DIRECTORY>/device/<DEVICE_OEM>/<DEVICE_CODENAME> and open "vendorsetup.sh". For example, if you took the device tree from AOKP, but you are building PAC ROM, change the following line from this,
 
 ```
 add_lunch_combo aokp_enchilada-eng
