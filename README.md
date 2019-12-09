@@ -130,6 +130,14 @@ make otapackage
 
 This command generates a .zip file in the same directory as mentioned above. This process takes a shorter time to execute as you should have the necessary files required after building to flash a functioning ROM into a device, so the program is smart enough not to build Android again. With that said, if you do not want to create any .img files but generate a .zip file directly, you can run "make otapackage" instead of the "make -jX" command mentioned above.
 
+Note: To quickly enter the output directory, you can type
+
+```sh
+cd $OUT
+```
+
+into the terminal.
+
 ### Future Builds
 
 Run the following commands below to update your ROM and device sources.
