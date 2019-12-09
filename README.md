@@ -9,7 +9,7 @@ Click this link [here](https://source.android.com/setup/build/requirements) from
 
 ## How To Build Stock AOSP ROMs
 
-### repo init
+### Initialising The Source Directory
 
 Click [here](https://source.android.com/setup/build/downloading) to download Repo. Now, while following the instructions, it might tell you to enter the following command or something similar if you are downloading a specific version of Android rather than the latest version:
 
@@ -19,13 +19,15 @@ repo init -u https://android.googlesource.com/platform/manifest -b android-4.0.1
 
 Take note that the following example tells Repo to initialise the AOSP repository from the "android-4.0.1_r1" branch. If you want to download another branch of Android, click [here](https://source.android.com/setup/start/build-numbers#source-code-tags-and-builds) or the link provided in the instructions. After that, copy the branch name from the appropriate row from the table into the command and run it. You should have configured Git if you followed the instructions carefully, or this command results in an error. If you do not want Google to know your name and username, feel free to enter a placeholder name and email address just like how the examples from the instructions show. When asked whether you want to enable colour display in this user account, feel free to enter "yes", as it does not matter.
 
-### repo sync
+### Download The Source Code
 
 After running "repo init", continue to follow the instructions and run "repo sync". Note that depending on your network speed, you might want to set the number of threads that should be utilised to synchronise the repo. The default option (without specifying any arguments) would be four threads. If you have a slower internet connection, you can lower it down to two. To set the number of threads to allocate for download to two:
 
 ```sh
 repo sync -j2
 ```
+
+Note: You can increase the number of threads by increasing the number of X, where X in -jX is the number of threads to use while downloading the source. This is highly dependent on the quality of your internet connection with the repo server.
 
 This process takes about an hour or more, so feel free to grab a cup of coffee, get on with your day while having this process running in the background on your computer.
 
