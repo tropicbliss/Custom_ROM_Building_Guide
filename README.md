@@ -6,7 +6,13 @@ Note: This guide assumes that you know how to use Linux fluently. This guide is 
 
 ## Requirements And Setting Up
 
-Click this link [here](https://source.android.com/setup/build/requirements) from the official AOSP website to see if your computer meets the hardware and software requirements needed to build ROMs. Also, click this link [here](https://source.android.com/setup/build/initializing) to set up your build environment properly (don't forget to update your pre-existing packages). I personally use a Ubuntu Server 18.04 build server, as it is minimalistic and contains the OpenJDK 8 package. I heavily recommend Ubuntu 18.04 or any version higher that contains the OpenJDK 8 package in its repo by default. It is possible to build ROMs in macOS, but this guide is targeted specifically for Linux users.
+Click this link [here](https://source.android.com/setup/build/requirements) from the official AOSP website to see if your computer meets the hardware and software requirements needed to build ROMs. Also, click this link [here](https://source.android.com/setup/build/initializing) to set up your build environment properly (don't forget to update your pre-existing packages). Another package to install is OpenJDK 8, which is a required package to build any ROM that is Android Oreo or newer.
+
+```sh
+sudo apt install openjdk-8-jdk
+```
+
+I personally use a Ubuntu Server 18.04 build server, as it is minimalistic and contains the OpenJDK 8 package. I heavily recommend Ubuntu 18.04 or any version higher that contains the OpenJDK 8 package in its repo by default. It is also possible to build ROMs in macOS, but this guide is targeted specifically for Linux users.
 
 ## How To Build Stock AOSP ROMs
 
