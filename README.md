@@ -26,8 +26,6 @@ Click [here](https://source.android.com/setup/build/downloading) to download Rep
 repo init -u https://android.googlesource.com/platform/manifest -b android-4.0.1_r1
 ```
 
-This will download your device’s device specific configuration and kernel.
-
 Take note that the following example tells Repo to initialise the AOSP repository from the "android-4.0.1_r1" branch. If you want to download another branch of Android, click [here](https://source.android.com/setup/start/build-numbers#source-code-tags-and-builds) or the link provided in the instructions. After that, copy the branch name from the appropriate row from the table into the command and run it.
 
 You should have configured Git if you followed the instructions carefully, or this command results in an error. If you do not want Google to know your name and username, feel free to enter a placeholder name and email address just like how the examples from the instructions show. When asked whether you want to enable colour display in this user account, feel free to enter "yes", as it does not matter.
