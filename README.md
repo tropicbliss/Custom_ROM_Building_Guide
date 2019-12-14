@@ -14,6 +14,8 @@ sudo apt install openjdk-8-jdk
 
 I personally use a Ubuntu Server 18.04 build server, as it is minimalistic and contains the OpenJDK 8 package. I heavily recommend Ubuntu 18.04 or any version higher that contains the OpenJDK 8 package in its repo by default. It is also possible to build ROMs in macOS, but this guide is targeted specifically for Linux users.
 
+Note: If you are building for Android Nougat, install both OpenJDK 7 and 8.
+
 ## How To Build Stock AOSP ROMs
 
 ### Initialising The Source Directory
