@@ -42,12 +42,6 @@ Note: You can increase the number of threads by increasing the number of X, wher
 
 This process takes about an hour or more, so feel free to grab a cup of coffee, get on with your day while having this process running in the background on your computer.
 
-### Speeding Up Your Build
-
-Refer to this [link](https://wiki.lineageos.org/devices/klte/build#turn-on-caching-to-speed-up-build) to find out how to speed up your building process.
-
-Note: To prevent your computer from sleeping, download a software called "Caffeine", which engages a wakelock to prevent your computer from sleeping so that the computer does not disrupt the process automatically.
-
 ### Prepare The Device-specific Code
 
 After running "repo sync", click [here](https://source.android.com/setup/build/building) and follow the instructions to start the process of building Android. Now, the instructions might want you to run the following command:
