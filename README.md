@@ -81,7 +81,7 @@ Now run "repo sync" and the "lunch" command to prepare to build.
 
 Note: If you own a LineageOS device that you wish to build for, you can also extract the proprietary binaries from the ROM. Information is provided in the build instructions of the various devices in the LineageOS Wiki.
 
-Another option will be to directly download the proprietary binaries from [here](https://developers.google.com/android/drivers) if you are unable to find it in the TheMuppets repository. Download all hardware components for the device you are building.
+Another option will be to directly download the proprietary binaries from [here](https://developers.google.com/android/drivers) if you are unable to find it in the TheMuppets repository. For newer phones, after extracting the .tgz file a shell script will be provided that requires you to physically plug in your phone you are building for to your computer, so that the script can extract the proprietary binaries out of the phone itself.
 
 ### Turn On Caching To Speed Up Build
 
