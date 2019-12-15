@@ -79,7 +79,7 @@ Now head over to the correct branch (select the Lineage version that corresponds
 
 Now run "repo sync" and the "lunch" command to prepare to build.
 
-Note: If you own the device you can also extract the proprietary binaries provided that you are running LineageOS based on the branch you wish to build for. Information is provided in the build instructions of the various devices in the LineageOS Wiki.
+Note: If you own a LineageOS device that you wish to build for, you can also extract the proprietary binaries from the ROM. Information is provided in the build instructions of the various devices in the LineageOS Wiki.
 
 ### Turn On Caching To Speed Up Build
 
