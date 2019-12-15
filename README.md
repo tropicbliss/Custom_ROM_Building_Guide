@@ -143,10 +143,6 @@ cd $OUT
 
 into the terminal.
 
-### Commands
-
-Run "hmm" to get a list of all available commands at your disposal.
-
 ### Future Builds
 
 Run the following commands below to update your ROM and device sources.
@@ -156,10 +152,6 @@ repo sync
 source build/envsetup.sh
 lunch
 ```
-
-## Trying Out Different Android Versions
-
-You can install Android Studio on your computer and use the included Android emulator to try out different stock versions of Android.
 
 ## How To Build Custom ROMs
 
