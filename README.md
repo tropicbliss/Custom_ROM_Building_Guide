@@ -4,6 +4,8 @@ This guide offers a simple guide on how to build a custom ROM for Android. Howev
 
 Note: This guide assumes that you know how to use Linux fluently. This guide is a compilation of what I've learned over the years. Thanks to AlaskaLinuxUser and LineageOS wiki and many other sources my tired brain is unable to remember, as this guide will not be possible without them.
 
+Note: This guide is so outdated that you shouldn't be following these instructions word for word.
+
 ## Requirements And Setting Up
 
 Click this link [here](https://source.android.com/setup/build/requirements) from the official AOSP website to see if your computer meets the hardware and software requirements needed to build ROMs. Also, click this link [here](https://source.android.com/setup/build/initializing) to set up your build environment properly (don't forget to update your pre-existing packages). Another package to install is OpenJDK 8, which is a required package to build any ROM that is Android Oreo or newer.
