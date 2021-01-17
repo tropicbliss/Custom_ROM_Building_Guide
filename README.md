@@ -1,4 +1,4 @@
-# Android Custom ROM Building Guide
+# Android Custom ROM Building Guide (DEPRECATED)
 
 This guide offers a simple guide on how to build a custom ROM for Android. However, simple can be harder than complex: You have to work hard to get your thinking clean to make it simple *(I'm not even sure what I'm saying at this point, thanks to sleep deprivation)*. But it’s worth it in the end because once you get there, you can move mountains.
 
